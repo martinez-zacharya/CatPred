@@ -402,7 +402,6 @@ def get_data(path: str,
     else:
         with gzip.open(protein_records_path, "rt", encoding="utf-8") as f:
             protein_records = json.load(f)
-        
     if args is not None:
         # Prefer explicit function arguments but default to args if not provided
         smiles_columns = smiles_columns if smiles_columns is not None else args.smiles_columns
